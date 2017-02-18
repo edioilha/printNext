@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="8">
+      <Unit0>
+        <Filename Value="projetoNext.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <CursorPos Y="21"/>
+        <UsageCount Value="55"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="uprincipal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uPrincipal"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="30" Y="16"/>
+        <UsageCount Value="55"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="udm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DM"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uDM"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="77"/>
+        <CursorPos X="74" Y="89"/>
+        <UsageCount Value="55"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="..\..\lcl\include\application.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="421"/>
+        <CursorPos Y="454"/>
+        <UsageCount Value="8"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\..\lcl\interfaces\win32\win32object.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="135"/>
+        <CursorPos Y="167"/>
+        <UsageCount Value="8"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\..\components\sqldb\registersqldb.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="96"/>
+        <CursorPos X="13" Y="116"/>
+        <UsageCount Value="8"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="..\unit1.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="58" Y="29"/>
+        <UsageCount Value="19"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="..\..\lcl\lresources.pp"/>
+        <UnitName Value="LResources"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3147"/>
+        <CursorPos Y="3163"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+    </Units>
+    <JumpHistory Count="23" HistoryIndex="22">
+      <Position1>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="67" Column="77" TopLine="53"/>
+      </Position1>
+      <Position2>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="87" Column="5" TopLine="55"/>
+      </Position2>
+      <Position3>
+        <Filename Value="udm.pas"/>
+        <Caret Line="81" Column="9" TopLine="76"/>
+      </Position3>
+      <Position4>
+        <Filename Value="udm.pas"/>
+        <Caret Line="91" Column="6" TopLine="83"/>
+      </Position4>
+      <Position5>
+        <Filename Value="udm.pas"/>
+        <Caret Line="92" Column="6" TopLine="84"/>
+      </Position5>
+      <Position6>
+        <Filename Value="udm.pas"/>
+        <Caret Line="94" Column="6" TopLine="86"/>
+      </Position6>
+      <Position7>
+        <Filename Value="udm.pas"/>
+        <Caret Line="115" Column="72" TopLine="105"/>
+      </Position7>
+      <Position8>
+        <Filename Value="udm.pas"/>
+        <Caret Line="116" Column="5" TopLine="100"/>
+      </Position8>
+      <Position9>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="69" Column="21" TopLine="49"/>
+      </Position9>
+      <Position10>
+        <Filename Value="udm.pas"/>
+        <Caret Line="78" Column="74" TopLine="66"/>
+      </Position10>
+      <Position11>
+        <Filename Value="udm.pas"/>
+        <Caret Line="79" Column="74" TopLine="67"/>
+      </Position11>
+      <Position12>
+        <Filename Value="udm.pas"/>
+        <Caret Line="80" Column="74" TopLine="68"/>
+      </Position12>
+      <Position13>
+        <Filename Value="udm.pas"/>
+        <Caret Line="81" Column="74" TopLine="69"/>
+      </Position13>
+      <Position14>
+        <Filename Value="udm.pas"/>
+        <Caret Line="82" Column="74" TopLine="70"/>
+      </Position14>
+      <Position15>
+        <Filename Value="udm.pas"/>
+        <Caret Line="83" Column="74" TopLine="71"/>
+      </Position15>
+      <Position16>
+        <Filename Value="udm.pas"/>
+        <Caret Line="84" Column="74" TopLine="72"/>
+      </Position16>
+      <Position17>
+        <Filename Value="udm.pas"/>
+        <Caret Line="85" Column="74" TopLine="73"/>
+      </Position17>
+      <Position18>
+        <Filename Value="udm.pas"/>
+        <Caret Line="86" Column="74" TopLine="74"/>
+      </Position18>
+      <Position19>
+        <Filename Value="udm.pas"/>
+        <Caret Line="87" Column="74" TopLine="75"/>
+      </Position19>
+      <Position20>
+        <Filename Value="udm.pas"/>
+        <Caret Line="88" Column="74" TopLine="76"/>
+      </Position20>
+      <Position21>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="59" Column="21" TopLine="51"/>
+      </Position21>
+      <Position22>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="74" Column="25" TopLine="63"/>
+      </Position22>
+      <Position23>
+        <Filename Value="uprincipal.pas"/>
+        <Caret Line="73" Column="25" TopLine="62"/>
+      </Position23>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>

@@ -1,0 +1,153 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 238
+  Height = 126
+  Top = 117
+  Width = 459
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsDialog
+  Caption = 'Principal'
+  ClientHeight = 126
+  ClientWidth = 459
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.6.2.0'
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 103
+    Width = 459
+    Panels = <>
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 38
+    Top = 0
+    Width = 459
+    Align = alTop
+    ClientHeight = 38
+    ClientWidth = 459
+    TabOrder = 1
+    object StaticText1: TStaticText
+      Left = 8
+      Height = 17
+      Top = 12
+      Width = 48
+      Caption = 'Cliente:'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object DBOrcamento: TDBText
+      Left = 384
+      Height = 15
+      Top = 12
+      Width = 53
+      Alignment = taRightJustify
+      Anchors = [akTop, akRight]
+      AutoSize = False
+      DataField = 'codOrc'
+      DataSource = DM.DSOrcamento
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label1: TLabel
+      Left = 352
+      Height = 15
+      Top = 12
+      Width = 26
+      Anchors = [akTop, akRight]
+      Caption = 'Orç.:'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object DBNomeCliente: TDBText
+      Left = 56
+      Height = 15
+      Top = 12
+      Width = 272
+      AutoSize = False
+      DataField = 'nome'
+      DataSource = DM.DSOrcamento
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 65
+    Top = 38
+    Width = 459
+    Align = alClient
+    ClientHeight = 65
+    ClientWidth = 459
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+    object edtOrcamento: TEdit
+      Left = 8
+      Height = 23
+      Top = 8
+      Width = 252
+      TabOrder = 0
+      TextHint = 'Digitar código do orçamento'
+    end
+    object btnImprimir: TBitBtn
+      Left = 8
+      Height = 25
+      Hint = 'Enviar para Impressora'
+      Top = 32
+      Width = 75
+      Caption = '&Imprimir'
+      Enabled = False
+      Kind = bkOK
+      ModalResult = 1
+      TabOrder = 1
+    end
+    object btnVisualizar: TBitBtn
+      Left = 96
+      Height = 25
+      Hint = 'Visualizar impressão.'
+      Top = 32
+      Width = 75
+      Caption = '&Visualizar'
+      Enabled = False
+      Kind = bkAbort
+      ModalResult = 3
+      OnClick = btnVisualizarClick
+      TabOrder = 2
+    end
+    object DBTotal: TDBText
+      Left = 350
+      Height = 25
+      Top = 8
+      Width = 87
+      Alignment = taRightJustify
+      AutoSize = False
+      DataField = 'valortotal'
+      DataSource = DM.DSOrcamento
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -19
+      Font.Name = 'Arial'
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsBold, fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+    object BitBtnBuscar: TBitBtn
+      Left = 185
+      Height = 25
+      Hint = 'Localizar Orçamento'
+      Top = 32
+      Width = 75
+      Caption = 'Buscar'
+      OnClick = BitBtnBuscarClick
+      TabOrder = 3
+    end
+  end
+end

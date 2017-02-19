@@ -5,8 +5,8 @@ unit uDM;
 interface
 
 uses
-  Classes, SysUtils, mysql51conn, sqldb, db, FileUtil, ZConnection, ZDataset,
-  LR_DBSet, LR_Class, LR_Desgn, IniFiles, Dialogs;
+  Classes, SysUtils, mysql51conn, sqldb, db, FileUtil, PrintersDlgs,
+  ZConnection, ZDataset, LR_DBSet, LR_Class, LR_Desgn, IniFiles, Dialogs;
 
 type
 
@@ -14,12 +14,10 @@ type
 
   TDM = class(TDataModule)
     DSOrcamento: TDataSource;
-    DS: TDataSource;
     frDBDataSet: TfrDBDataSet;
     frDesigner: TfrDesigner;
     frReport: TfrReport;
-    MySQL51Conn: TMySQL51Connection;
-    SQLQueryOrcamento: TSQLQuery;
+    PrintDialog: TPrintDialog;
     SQLQueryOrcamentocodOrc: TLongintField;
     SQLQueryOrcamentodsccodfabricante: TStringField;
     SQLQueryOrcamentoendereco: TStringField;
@@ -31,7 +29,6 @@ type
     SQLQueryOrcamentounidDesc: TStringField;
     SQLQueryOrcamentovalortotal: TBCDField;
     SQLQueryOrcamentovlrdesconto: TBCDField;
-    SQLTransaction: TSQLTransaction;
     ZConn: TZConnection;
     ZQueryOrcamento: TZQuery;
     ZQueryOrcamentocodOrc: TLongintField;
@@ -104,7 +101,7 @@ end;
 procedure TDM.DSOrcamentoStateChange(Sender: TObject);
 begin
   frmPrincipal.btnVisualizar.Enabled:= ZQueryOrcamento.State = dsBrowse;
-  frmPrincipal.BitBtnBuscar.SetFocus;
+  frmPrincipal.btnImprimir.Enabled:= ZQueryOrcamento.State = dsBrowse;
 end;
 
 

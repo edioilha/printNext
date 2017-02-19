@@ -5,245 +5,10 @@ object DM: TDM
   HorizontalOffset = 371
   VerticalOffset = 45
   Width = 411
-  object MySQL51Conn: TMySQL51Connection
-    Connected = False
-    LoginPrompt = False
-    DatabaseName = 'dbnext'
-    KeepConnection = False
-    Password = '$enha'
-    Transaction = SQLTransaction
-    UserName = 'root'
-    HostName = 'localhost'
-    Options = []
-    left = 48
-    top = 32
-  end
-  object DS: TDataSource
-    AutoEdit = False
-    DataSet = SQLQueryOrcamento
-    left = 256
-    top = 111
-  end
-  object SQLTransaction: TSQLTransaction
-    Active = False
-    Database = MySQL51Conn
-    Options = []
-    left = 48
-    top = 111
-  end
-  object SQLQueryOrcamento: TSQLQuery
-    FieldDefs = <    
-      item
-        Name = 'codOrc'
-        DataType = ftInteger
-        Precision = -1
-      end    
-      item
-        Name = 'dsccodfabricante'
-        DataType = ftString
-        Precision = -1
-        Size = 15
-      end    
-      item
-        Name = 'proDesc'
-        DataType = ftString
-        Precision = -1
-        Size = 100
-      end    
-      item
-        Name = 'unidDesc'
-        DataType = ftString
-        Precision = -1
-        Size = 2
-      end    
-      item
-        Name = 'quant'
-        DataType = ftBCD
-        Precision = -1
-        Size = 4
-      end    
-      item
-        Name = 'pcounitario'
-        DataType = ftBCD
-        Precision = -1
-        Size = 4
-      end    
-      item
-        Name = 'vlrdesconto'
-        DataType = ftBCD
-        Precision = -1
-        Size = 4
-      end    
-      item
-        Name = 'itCod'
-        DataType = ftInteger
-        Precision = -1
-      end    
-      item
-        Name = 'valortotal'
-        DataType = ftBCD
-        Precision = -1
-        Size = 4
-      end    
-      item
-        Name = 'nome'
-        DataType = ftString
-        Precision = -1
-        Size = 70
-      end    
-      item
-        Name = 'endereco'
-        DataType = ftString
-        Precision = -1
-        Size = 100
-      end>
-    Database = MySQL51Conn
-    Transaction = SQLTransaction
-    SQL.Strings = (
-      'select o.codorcamento as codOrc, p.dsccodfabricante, p.descricao as proDesc, u.descricao as unidDesc,'
-      '       oi.quantidade as quant, oi.pcounitario, oi.vlrdesconto, oi.codorcamento as itCod,'
-      '       o.valortotal, tc.nome, tc.endereco'
-      'FROM tborcamento o'
-      'left join tborcamentoitem oi on (oi.codorcamento = o.codorcamento)'
-      'left join tbproduto p on (p.codproduto = oi.codproduto)'
-      'left join tbunidade u on (u.codunidade = p.codunidade)'
-      'left join tbcliente tc on (tc.codcli = o.codcli)'
-      'WHERE o.codorcamento =:codigoOrcamento;'
-    )
-    Options = []
-    Params = <    
-      item
-        DataType = ftUnknown
-        Name = 'codigoOrcamento'
-        ParamType = ptInput
-      end>
-    left = 156
-    top = 112
-    object SQLQueryOrcamentocodOrc: TLongintField
-      FieldKind = fkData
-      FieldName = 'codOrc'
-      Index = 0
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = True
-    end
-    object SQLQueryOrcamentodsccodfabricante: TStringField
-      FieldKind = fkData
-      FieldName = 'dsccodfabricante'
-      Index = 1
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 15
-    end
-    object SQLQueryOrcamentoquantidade: TBCDField
-      FieldKind = fkData
-      FieldName = 'quantidade'
-      Index = 2
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Precision = -1
-      Currency = False
-      MaxValue = 0
-      MinValue = 0
-    end
-    object SQLQueryOrcamentoproDesc: TStringField
-      FieldKind = fkData
-      FieldName = 'proDesc'
-      Index = 3
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 100
-    end
-    object SQLQueryOrcamentounidDesc: TStringField
-      FieldKind = fkData
-      FieldName = 'unidDesc'
-      Index = 4
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 2
-    end
-    object SQLQueryOrcamentopcounitario: TBCDField
-      FieldKind = fkData
-      FieldName = 'pcounitario'
-      Index = 5
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Precision = -1
-      Currency = False
-      MaxValue = 0
-      MinValue = 0
-    end
-    object SQLQueryOrcamentovlrdesconto: TBCDField
-      FieldKind = fkData
-      FieldName = 'vlrdesconto'
-      Index = 6
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Precision = -1
-      Currency = False
-      MaxValue = 0
-      MinValue = 0
-    end
-    object SQLQueryOrcamentoitCod: TLongintField
-      FieldKind = fkData
-      FieldName = 'itCod'
-      Index = 7
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-    end
-    object SQLQueryOrcamentovalortotal: TBCDField
-      FieldKind = fkData
-      FieldName = 'valortotal'
-      Index = 8
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Precision = -1
-      Currency = True
-      MaxValue = 0
-      MinValue = 0
-    end
-    object SQLQueryOrcamentonome: TStringField
-      FieldKind = fkData
-      FieldName = 'nome'
-      Index = 9
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 70
-    end
-    object SQLQueryOrcamentoendereco: TStringField
-      FieldKind = fkData
-      FieldName = 'endereco'
-      Index = 10
-      LookupCache = False
-      ProviderFlags = [pfInUpdate, pfInWhere]
-      ReadOnly = False
-      Required = False
-      Size = 100
-    end
-  end
   object frDBDataSet: TfrDBDataSet
     DataSet = ZQueryOrcamento
-    left = 51
-    top = 293
+    left = 24
+    top = 104
   end
   object frReport: TfrReport
     Dataset = frDBDataSet
@@ -251,12 +16,12 @@ object DM: TDM
     Options = []
     PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
     DataType = dtDataSet
-    left = 128
-    top = 293
+    left = 101
+    top = 104
   end
   object frDesigner: TfrDesigner
-    left = 208
-    top = 293
+    left = 189
+    top = 104
   end
   object ZConn: TZConnection
     ControlsCodePage = cCP_UTF8
@@ -266,8 +31,8 @@ object DM: TDM
     )
     Port = 0
     Protocol = 'mysql-5'
-    left = 43
-    top = 203
+    left = 24
+    top = 16
   end
   object ZQueryOrcamento: TZQuery
     Connection = ZConn
@@ -287,8 +52,8 @@ object DM: TDM
         Name = 'codigoOrcamento'
         ParamType = ptUnknown
       end>
-    left = 120
-    top = 203
+    left = 101
+    top = 16
     ParamData = <    
       item
         DataType = ftUnknown
@@ -411,7 +176,11 @@ object DM: TDM
   object DSOrcamento: TDataSource
     DataSet = ZQueryOrcamento
     OnStateChange = DSOrcamentoStateChange
-    left = 208
-    top = 203
+    left = 189
+    top = 16
+  end
+  object PrintDialog: TPrintDialog
+    left = 104
+    top = 192
   end
 end
